@@ -31,8 +31,6 @@ public class Filter {
             System.out.println();
         }
 
-
-
     }
 
 }

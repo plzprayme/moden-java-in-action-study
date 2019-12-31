@@ -25,7 +25,8 @@ public class StreamMain {
 //                return x.getCalories() > 300; }).map(Dish::getName).limit(3).collect(toList());
 //        System.out.println(names);
 
-        Filter.filterRun();
+//        Filter.filterRun();
+        Reduce.reduceRun(menu);
 
     }
 }
