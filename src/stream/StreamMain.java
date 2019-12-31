@@ -20,10 +20,12 @@ public class StreamMain {
                 new Dish("salmon", false, 450, Dish.Type.FISH)
         );
 
-        List<String> names = menu.stream().filter(x -> {
-                System.out.println("filtering " + x.getCalories());
-                return x.getCalories() > 300; }).map(Dish::getName).limit(3).collect(toList());
-        System.out.println(names);
+//        List<String> names = menu.stream().filter(x -> {
+//                System.out.println("filtering " + x.getCalories());
+//                return x.getCalories() > 300; }).map(Dish::getName).limit(3).collect(toList());
+//        System.out.println(names);
+
+        Filter.filterRun();
 
     }
 }
