@@ -1,5 +1,7 @@
 package stream;
 
+import stream.practice.PracticeMain;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,7 +28,7 @@ public class StreamMain {
 //        System.out.println(names);
 
 //        Filter.filterRun();
-        Reduce.reduceRun(menu);
-
+//        Reduce.reduceRun(menu);
+        PracticeMain.practiceRun();
     }
 }
