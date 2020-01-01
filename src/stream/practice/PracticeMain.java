@@ -24,8 +24,15 @@ public class PracticeMain {
 
 //        numberOne(transactions);
 //        numberTwo(transactions);
-        numberThree(transactions);
+//        numberThree(transactions);
+//        numberFour(transactions);
+//        numberFive(transactions);
+//        numberSix(transactions);
+//        numberSeven(transactions);
+        numberEight(transactions);
     }
+
+
 
     private static void numberOne(List<Transaction> transactions) {
         List<Transaction> tmp = transactions.stream().filter(x -> x.getYear() == 2011)
@@ -40,9 +47,49 @@ public class PracticeMain {
     private static void numberThree(List<Transaction> transactions) {
         System.out.println(
                 transactions.stream()
+                            .filter(i -> i.getTrader().getCity().equals("Cambridge"))
+                            .distinct().sorted(Comparator.comparing(i -> i.getTrader().getName()))
+                            .collect(Collectors.toList())
+        );
+    }
+
+    private static void numberFour(List<Transaction> transactions) {
+        System.out.println(
+                transactions.stream()
+                            .map(i -> i.getTrader().getName()).distinct()
+                            .collect(Collectors.joining(","))
+        );
+    }
+
+    private static void numberFive(List<Transaction> transactions) {
+        System.out.println(
+                transactions.stream()
+                            .anyMatch(i -> i.getTrader()
+                                            .getCity()
+                                            .equals("Milan")
+                            )
+        );
+    }
+
+    private static void numberSix(List<Transaction> transactions) {
+        transactions.stream()
                 .filter(i -> i.getTrader().getCity().equals("Cambridge"))
-                .distinct().sorted(Comparator.comparing(i -> i.getTrader().getName()))
-                .collect(Collectors.toList())
+                .map(Transaction::getValue)
+                .forEach(System.out::println);
+    }
+
+    private static void numberSeven(List<Transaction> transactions) {
+        System.out.println(
+                transactions.stream()
+                            .map(Transaction::getValue)
+                            .reduce(Integer::max)
+        );
+    }
+
+    private static void numberEight(List<Transaction> transactions) {
+        System.out.println(
+                transactions.stream()
+                            .min(Comparator.comparing(Transaction::getValue))
         );
     }
 }
