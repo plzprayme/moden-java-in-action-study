@@ -1,5 +1,9 @@
 package stream;
 
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
+
 public class Dish {
     private final String name;
     private final boolean vegetarian;
@@ -34,6 +38,12 @@ public class Dish {
         return "Dish{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+
+    public boolean printOverCalrories() {
+        System.out.println("filtering " + this.getCalories());
+        return this.getCalories() > 300;
     }
 
 
