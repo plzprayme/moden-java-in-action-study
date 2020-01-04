@@ -1,6 +1,4 @@
-package designpattern.Strategy;
-
-import javax.xml.validation.Validator;
+package designpattern.strategy;
 
 public class Strategy {
     private final ValidationStrategy strategy;

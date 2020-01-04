@@ -1,4 +1,4 @@
-package designpattern.Strategy;
+package designpattern.strategy;
 
 public class IsAllLowerCase implements ValidationStrategy {
     @Override

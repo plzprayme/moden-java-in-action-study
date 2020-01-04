@@ -1,5 +1,7 @@
 import action.ActionMain;
-import designpattern.Strategy.Strategy;
+import designpattern.observer.Observer;
+import designpattern.observer.ObserverMain;
+import designpattern.strategy.Strategy;
 import lambda.LambdaMain;
 import stream.StreamMain;
 
@@ -12,8 +14,12 @@ public class Main {
 //        runLambda();
 
 //        runStreamMain();
-        Strategy.strategyRun();
+
+//        Strategy.strategyRun();
+        ObserverMain.observerRun();
+
     }
+
 
 
     private static void runAction() {
