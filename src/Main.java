@@ -1,4 +1,5 @@
 import action.ActionMain;
+import designpattern.Strategy.Strategy;
 import lambda.LambdaMain;
 import stream.StreamMain;
 
@@ -10,8 +11,10 @@ public class Main {
 
 //        runLambda();
 
-        runStreamMain();
+//        runStreamMain();
+        Strategy.strategyRun();
     }
+
 
     private static void runAction() {
         ActionMain actionMain = new ActionMain();

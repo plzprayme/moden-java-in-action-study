@@ -28,7 +28,6 @@ public class StreamMain {
                 .limit(3)
                 .collect(toList());
 
-
         System.out.println(names);
 
 //        Filter.filterRun();
