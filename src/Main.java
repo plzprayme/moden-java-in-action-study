@@ -1,4 +1,7 @@
 import action.ActionMain;
+import designpattern.chain.HeaderTextProcessing;
+import designpattern.chain.ProcessingObject;
+import designpattern.chain.SpellCheckerProcessing;
 import designpattern.observer.Observer;
 import designpattern.observer.ObserverMain;
 import designpattern.strategy.Strategy;
@@ -16,7 +19,13 @@ public class Main {
 //        runStreamMain();
 
 //        Strategy.strategyRun();
-        ObserverMain.observerRun();
+//        ObserverMain.observerRun();
+
+        ProcessingObject<String> p1 = new HeaderTextProcessing();
+        ProcessingObject<String> p2 = new SpellCheckerProcessing();
+        p1.setSuccessor(p2);
+        String result = p1.handle("Aren't labdas really sexy?!!");
+        System.out.println(result);
 
     }
 
